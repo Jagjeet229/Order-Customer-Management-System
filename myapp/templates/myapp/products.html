@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello Jagjeet{% endblock %}
+{% block body_block %}
+    <h2 class="text-center">List of Products</h2>
+    <ul class="list-group text-center">
+    {% for prod in prodlist %}
+{#        <li> {{ prod.name }} </a> </li>#}
+        <li class="list-group-item-action text-center" > <a href="{{ prod.id }}">{{ prod.name}}</a> </li>
+    {% endfor %}
+    </ul>
+    <a href = "{% url 'myapp:place_order' %}">Click here to place order</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+     <h1>Site Registration</h1>
+    <form action="{% url 'myapp:register' %}" method="post"style="color: black">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="submit1" class="btn btn-info" value="Register">Register</button>
+
+    </form>
+
+{% endblock %}

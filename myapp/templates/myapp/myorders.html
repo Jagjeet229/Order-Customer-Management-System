@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello Jagjeet{% endblock %}
+{% block body_block %}
+    <h2>List of Products</h2>
+    <ol>
+    {% for order in order_list %}
+{#        <li> {{ prod.name }} </a> </li>#}
+        <li> {{ order.product.name }} </li>
+    {% endfor %}
+    </ol>
+{% endblock %}

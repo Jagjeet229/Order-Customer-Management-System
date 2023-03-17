@@ -1,0 +1,17 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello Jagjeet{% endblock %}
+{% block body_block %}
+    <p>Name: {{ name }}</p>
+    <p>Interested: {{ interested }}</p>
+    <p>Price: {{ price }}</p>
+
+    <h5>{{ msg }}</h5>
+
+    <form action= "" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+{#    <input type="submit" value="Submit">#}
+    <button type="submit" value="productdetail" >Submit</button>
+</form>
+
+{% endblock %}

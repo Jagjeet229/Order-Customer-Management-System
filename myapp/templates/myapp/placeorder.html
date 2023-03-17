@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}Hello Jagjeet{% endblock %}
+{% block body_block %}
+        {% for prod in prodlist %}
+        <ol> {{ prod.id }}) {{ prod.name}}</ol>
+    {% endfor %}
+
+    <form action= "{% url 'myapp:place_order' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" value="placeorder" >Place Order</button>
+</form>
+{% endblock %}
+

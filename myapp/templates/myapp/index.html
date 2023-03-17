@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    {% if cat_list %}
+    <h2 class="text-center">List of Categories</h2>
+    <ol>
+    {% for cat in cat_list %}
+        <ul class="text-center"> <a href="{{ cat.id }}" >{{ cat.name}}</a> </ul>
+    {% endfor %}
+    </ol>
+    {% else %}
+    <strong>There are no available categories!</strong>
+    {% endif %}
+
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+{#    <p><a href="/myapp/about">About page</a></p>#}
+{#    <a href="{% url ‘myapp:about ’%}">About Page</a>#}
+{#    <a href = "{% url 'myapp:index' %}">Click here to return to main page</a>#}
+{% endblock %}

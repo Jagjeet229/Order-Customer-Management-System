@@ -1,0 +1,15 @@
+body{
+ background-color: #9dde87;
+ color: dimgray;
+}
+
+h1{
+ font-size: 60px;
+ color: #2f324f;
+ font-style: oblique;
+}
+
+.hbar1 {
+ display: inline;
+ margin: 15px;
+}

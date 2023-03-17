@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+        <h2 style="color: black">Login</h2>
+        <form action="{% url 'myapp:login' %}" method="post">
+            {% csrf_token %}
+            <ul>
+                 <b><label style="color: black">User name:</label><input type="text" name="username"/></b>
+                 <b><label style="color: black">Password:</label><input type="password" name="password"/></b>
+
+                     {% if request.GET.next %}
+                         <input type="hidden" name="next" value="{{ request.GET.next }}">
+                     {% endif %}
+
+                 <input class = "btn btn-info" type="submit" value="login" />
+            </ul>
+        </form>
+
+                   <a href = "{% url 'myapp:forgot_password' %}">Forgot Password</a>
+{% endblock %}
