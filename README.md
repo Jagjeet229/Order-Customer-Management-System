@@ -1,2 +1,1 @@
-# Order Management System
-Order Management System
+# Order and Customer Management System
